@@ -1,5 +1,6 @@
 def jenkins_path= "/var/lib/jenkins"
 def angular_path = "${jenkins_path}/angular"
+def clone_path = "${angular_path}/test_app"
 
 node {
 
@@ -15,8 +16,7 @@ node {
   }
   
   stage('serve'){
-      dir("${angular_path}"){
-    sh "cd test_app"
+      dir("${clone_path}"){
     sh "npm install"
     sh "ng serve --host 0.0.0.0"
   }
