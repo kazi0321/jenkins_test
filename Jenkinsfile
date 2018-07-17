@@ -19,7 +19,7 @@ node {
       dir("${clone_path}"){
     sh "npm install"
     sh "ng serve --host 0.0.0.0 &"
-    sh "sleep 20"
+    sh "sleep 60"
     sh "kill `ps |grep serve |awk '{print $1}'`"
   }
   }
