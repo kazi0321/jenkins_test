@@ -20,7 +20,7 @@ node {
     sh "npm install"
     sh "ng serve --host 0.0.0.0 &"
     sh "sleep 60"
-    sh "kill `ps |grep serve |awk '{print $1}'`"
+    sh "kill `ps |grep ng |awk '{print $1}'`"
   }
   }
 
