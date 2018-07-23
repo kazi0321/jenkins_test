@@ -6,6 +6,7 @@ node {
 
     stage('scm'){
         checkout scm
+        sh "pwd"
     }
 
   stage('git'){
